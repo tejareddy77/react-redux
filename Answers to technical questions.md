@@ -7,6 +7,14 @@ A. With the new <react.profiler> you can measure a host of things programmatical
 4.	How would you improve the API that you just used?
 A. We can imporve the API by providing more filter options.
 5.	Please describe yourself using JSON.
-A.{
-    "About Myself":" ----Fill About Yourself--"
-  }
+A.This is me
+{
+“firstname": “Teja,
+"lastname": “desireddy”,
+"age": 26,
+"livein": “Canada”,
+"passion": [“Coding",“Learning”],
+"interests": [“Exploring”,"Marketing"],
+"believes": [“Self-Education is what makes us actually learn, understand and improve “]
+}
+
