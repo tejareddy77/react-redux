@@ -1,0 +1,198 @@
+$breakpoint-alpha: 480px;
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+body {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+
+.container {
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container h4, h2{
+  text-align: center;
+}
+
+input{
+  display: block;
+  width: 300px;
+  padding: .375rem .75rem;
+  margin: 0 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+ul.typeahead-selector{
+  position: relative;
+  list-style: none;
+  z-index: 99;
+  width: 300px;
+  padding: 10px;
+  text-align: left;
+  background: #34495E;
+  color: #fff;
+  border: 1px solid #024e6a;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 2px #111;
+  -moz-box-shadow: 0 0 2px #111;
+  box-shadow: 0 0 2px #111;
+
+  li{
+    padding: 0.5rem;
+    a{
+      text-decoration: none;
+      color: #fff;    
+    }
+  }
+}
+
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.res-table {
+  margin: 2rem auto;
+  width: 100%;
+  
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    display: none;  
+  }
+  
+  td {
+    display: block; 
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block;
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+  
+  
+}
+
+.res-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+/* 2 columns (600px) */
+
+@media only screen and (min-width:600px) {
+
+  
+
+  .container .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+
+/* 3 columns (768px) */
+
+@media only screen and (min-width:768px) {
+  .container .col {
+    width: 33.333%;
+  }
+}
+
+
+/* 4 columns (992px) */
+
+@media only screen and (min-width:992px) {
+  .container .col {
+    width: 25%;
+  }
+}
